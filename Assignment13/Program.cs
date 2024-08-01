@@ -34,6 +34,19 @@ namespace Assignment13
             ProcessBooks(books, (b) => b.PublicationDate);
             #endregion
 
+            #region Part 2
+            MyList<int> myList = new MyList<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            Console.WriteLine(myList);
+            Console.WriteLine(myList.Exists((x) => x >2));
+            Console.WriteLine(myList.Find((x) => x <2));
+            Console.WriteLine(myList.FindAll((x) => x == 0));
+            Console.WriteLine(myList.FindIndex((x) => x <= 0));
+            Console.WriteLine(myList.FindLast((x) => x == 1));
+            Console.WriteLine(myList.FindLastIndex((x) => x>0));
+            Console.WriteLine(myList.TrueForAll((x) => x % 2 == 0));
+            myList.ForEach(Console.WriteLine);
+            #endregion
+
         }
     }
 }
